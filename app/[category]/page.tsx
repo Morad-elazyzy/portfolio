@@ -16,10 +16,10 @@ export default function page({ params: { category } }: Props) {
   let renderhtml;
 
   if (category === "blogs") {
-    const blogs: Promise<blogType[]> = getBlogs();
+    const blogs: any = getBlogs();
     renderhtml = <BlogsList promise={blogs} />;
   } else {
-    const projects = getProjects(category);
+    const projects: any = getProjects(category);
     renderhtml = <ProjectsList promise={projects} />;
   }
   return (
