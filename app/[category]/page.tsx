@@ -8,7 +8,7 @@ import getBlogs from "@/data/getBlogs";
 
 type Props = {
   params: {
-    category: String;
+    category: string;
   };
 };
 
