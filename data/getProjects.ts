@@ -1,7 +1,7 @@
 import { db } from "./firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 
-export default async function (projectType) {
+export default async function (projectType: string) {
   const projectsCollection = collection(db, "projects");
   const res = await getDocs(projectsCollection);
   if (res.docs.length > 0) {

@@ -4,7 +4,7 @@ import Link from "next/link";
 function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className=" bg-fuchsia-800 text-white absolute bottom-0 left-0 right-0 ">
+    <footer className=" bg-fuchsia-800 text-white ">
       <div className="flex container mx-auto  px-4 py-4 justify-between items-center">
         <div>
           <p className="text-base sm:text-lg font-medium">

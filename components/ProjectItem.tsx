@@ -4,7 +4,7 @@ type Props = { project: projectType };
 
 function ProjectItem({ project }: Props) {
   return (
-    <Link href={project.project_url}>
+    <Link href={project.project_url} target="blank">
       <div className="grid gap-8 grid-cols-1 sm:grid-cols-2">
         <div className="left-content flex flex-col justify-center gap-2 order-2 sm:order-1 ">
           <h2 className="text-gray-800 text-2xl font-semibold">
@@ -15,12 +15,15 @@ function ProjectItem({ project }: Props) {
           </span>
           <p className="text-lg text-gray-700">{project.descreption}</p>
           <div className="flex items-start">
-            <p className="text-base text-gray-600 font-medium mr-2 whitespace-nowrap">
-              used tools
-            </p>
             <div className="flex gap-2 items-center flex-wrap ">
+              <span className="flex gap-2 items-center font-medium flex-wrap">
+                used tools :
+              </span>
               {project.used_tools.map((tool) => (
-                <span className="text-sm bg-fuchsia-950 text-white p-1">
+                <span
+                  key={tool}
+                  className="text-sm bg-fuchsia-950 text-white p-1"
+                >
                   {tool}
                 </span>
               ))}

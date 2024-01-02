@@ -12,29 +12,23 @@ type Props = {
   };
 };
 
-export default function page({ params: { category } }: Props) {
+export default async function page({ params: { category } }: Props) {
   let renderhtml;
 
   if (category === "blogs") {
     const blogs: any = getBlogs();
     renderhtml = <BlogsList promise={blogs} />;
   } else {
-    const projects: any = getProjects(category);
-    renderhtml = <ProjectsList promise={projects} />;
+    const projects = getProjects(category);
+    renderhtml = <ProjectsList promise={projects as Promise<projectType[]>} />;
   }
   return (
-    <main className="py-24 sm:pt-24 pt-36  px-4 ">
-      <div className="bg-fuchsia-700 text-white py-8 my-8 text-3xl pl-2 ">
-        <div className="container mx-auto">
-          <h2>
-            <span className="capitale">
-              {category == "front-end" ? "Front End " : category}
-            </span>
-            & Projects
-          </h2>
-        </div>
-      </div>
-
+    <main className="px-4">
+      <header className="container mx-auto ">
+        <h2 className="text-gray-800 mt-32 text-3xl font-bold capitalize">
+          {category == "blogs" ? "Blogs" : `${category} Projects`}
+        </h2>
+      </header>
       <Suspense fallback={<Loading />}>{renderhtml}</Suspense>
     </main>
   );

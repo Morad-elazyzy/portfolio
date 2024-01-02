@@ -11,7 +11,7 @@ export default async function () {
     }));
 
     /// sorting data
-    const sortedData = data.sort(function (a, b) {
+    const sortedData = data.sort(function (a: any, b: any) {
       return a.sort - b.sort;
     });
     //add the sorted data to the state
