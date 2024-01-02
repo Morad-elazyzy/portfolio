@@ -23,9 +23,9 @@ export default async function page({ params: { category } }: Props) {
     renderhtml = <ProjectsList promise={projects as Promise<projectType[]>} />;
   }
   return (
-    <main className="px-4">
+    <main className="px-4  pt-12 sm:pt-32 ">
       <header className="container mx-auto ">
-        <h2 className="text-gray-800 mt-32 text-3xl font-bold capitalize">
+        <h2 className="text-gray-800 mb-16 sm:text-3xl text-2xl font-bold capitalize">
           {category == "blogs" ? "Blogs" : `${category} Projects`}
         </h2>
       </header>

@@ -4,12 +4,12 @@ import { usePathname } from "next/navigation";
 function Navbar() {
   const pathname = usePathname();
   return (
-    <nav className="fixed shadow-md w-100  m-auto bg-white top-0 left-0 right-0 py-8 px-4">
+    <nav className="fixed shadow-md w-100  m-auto bg-white top-0 left-0 right-0 sm:py-8 py-4 px-4">
       <div className="container mx-auto flex gap-4 sm justify-between items-start sm:items-center flex-col sm:flex-row">
         <Link href="/" scroll={false}>
-          <span className="text-3xl font-bold text-gray-900">
+          <h3 className="sm:text-3xl text-xl font-bold text-gray-900">
             Morad Elazyzy
-          </span>
+          </h3>
         </Link>
         <ul className="flex gap-8 text-xl font-medium text-gray-800 ">
           <li>
