@@ -26,11 +26,20 @@ function ProjectItem({ project }: Props) {
             ))}
           </div>
         </div>
-        <button className="bg-fuchsia-800 mt-6 self-start text-white sm:text-2xl text-base rounded py-2 px-4">
-          <Link href={project.project_url} target="blank">
-            View
-          </Link>
-        </button>
+        <div>
+          <button className="bg-fuchsia-800 self-start text-white  text-base rounded py-2 px-4">
+            <Link href={project.project_url} target="blank">
+              View
+            </Link>
+          </button>
+          {project.code_src && project.code_src.length > 0 ? (
+            <button className="bg-fuchsia-800 ml-4 mt-6 self-start text-white text-base rounded py-2 px-4">
+              <Link href={project.code_src} target="blank">
+                source code
+              </Link>
+            </button>
+          ) : null}
+        </div>
       </div>
       <div className="right-content flex justify-center rounded items-center bg-fuchsia-800 h-96 order-1 sm:order-2">
         <img src={project.image_src} style={{ width: "90%", height: "90%" }} />

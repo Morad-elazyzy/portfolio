@@ -8,6 +8,7 @@ type projectType = {
   sort: string;
   used_tools: string[];
   image_src: string;
+  code_src?: string;
 };
 type blogType = {
   id: string;

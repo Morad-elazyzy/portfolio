@@ -11,7 +11,7 @@ type Props = {
     category: string;
   };
 };
-
+// export const revalidate = 0;
 export default async function page({ params: { category } }: Props) {
   let renderhtml;
 
