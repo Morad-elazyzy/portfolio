@@ -8,7 +8,7 @@ function Footer() {
       <div className="flex container mx-auto  px-4 py-4 justify-between items-center">
         <div>
           <p className="text-base sm:text-lg font-medium">
-            moradelazyzy22@gmail.com
+            elazyzy.morad.1@gmail.com
           </p>
         </div>
         <div className="flex text-xl gap-2 sm:text-3xl sm:gap-4">

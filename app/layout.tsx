@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         <Navbar />
-        <main className="min-h-screen py-14 ">{children}</main>
+        <main className="min-h-screen sm:py-14 pt-20 pb-14 ">{children}</main>
         <Footer />
       </body>
     </html>

@@ -18,7 +18,6 @@ function Navbar() {
               className={`hover:text-fuchsia-800 transition-colors hover:duration-500 ${
                 pathname == "/design" ? "link-active" : undefined
               }`}
-              scroll={false}
             >
               Design
             </Link>
@@ -29,7 +28,6 @@ function Navbar() {
               className={`hover:text-fuchsia-800 transition-colors hover:duration-500 ${
                 pathname == "/front-end" ? "link-active" : undefined
               }`}
-              scroll={false}
             >
               Front end
             </Link>
@@ -40,7 +38,6 @@ function Navbar() {
               className={`hover:text-fuchsia-800 transition-colors hover:duration-500 ${
                 pathname == "/blogs" ? "link-active" : undefined
               }`}
-              scroll={false}
             >
               Blogs
             </Link>

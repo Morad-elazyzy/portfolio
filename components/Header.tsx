@@ -1,10 +1,10 @@
 function Header() {
   return (
     <header
-      className="px-4 bg-dark bg-no-repeat bg-cover  h-100 h-screen flex justify-center items-center m-0 p-0"
+      className="px-4 bg-dark bg-no-repeat bg-cover h-100 h-screen flex justify-center items-center m-0"
       style={{ backgroundImage: "url(https://i.ibb.co/Gf6HKmJ/445126.jpg)" }}
     >
-      <div className="flex flex-col gap-4 items-center">
+      <div className="flex flex-col gap-4 items-center py-4 sm:p-0">
         <img
           className="w-40 h-40"
           src="https://i.ibb.co/RYnZkV4/Ellipse-1.png"
